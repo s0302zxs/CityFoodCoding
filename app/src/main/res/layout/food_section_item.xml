@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="kotlin.Unit" />
+
+        <variable
+            name="food"
+            type="com.giles.wealthparkcoding.data.model.Food" />
+
+        <variable
+            name="viewModel"
+            type="com.giles.wealthparkcoding.ui.home.HomeViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_white"
+        android:onClick="@{_ -> viewModel.onOpenDetailPageByFood.invoke(food)}"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/imgCity"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:imageFromUrl="@{food.image}"
+            app:leftRoundedImage="@{true}">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{food.name}"
+            style="@style/item_bold_title"
+            app:layout_constraintStart_toEndOf="@+id/imgCity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="22222"></TextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

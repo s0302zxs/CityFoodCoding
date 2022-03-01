@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- TODO: We should improve the animation logic in the future -->
+    <translate
+        android:duration="@integer/common_slide_anim_duration"
+        android:fromXDelta="0"
+        android:toXDelta="-105%" />
+</set>

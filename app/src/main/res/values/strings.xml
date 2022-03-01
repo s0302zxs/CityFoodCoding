@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WealthParkCoding</string>
+
+    <string name="city_title">Main Cities in Japan</string>
+    <string name="food_title">Most Popular Japanese Food</string>
+    <string name="retry">Retry</string>
+    <string name="empty_data">The section is empty</string>
+</resources>
